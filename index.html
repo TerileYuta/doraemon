@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--全体CSS-->
+    <link rel="stylesheet" href="./index.css">
+
+    <!--GoogleFonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi&family=Reggae+One&display=swap" rel="stylesheet">
+    <title>ドラえもんの倒し方</title>
+</head>
+<body>
+    <!-- Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <!-- Vue Router -->
+    <script src="https://unpkg.com/vue-router@3.5.2/dist/vue-router.js"></script>
+
+    <script type="text/x-template" id="home-card">
+        <div class="card-parent">
+            <div v-for="(post, index) in cardList" :key="index" class="card">
+                <div class="card-body">
+                    <h1>{{post.title}}</h1>
+                    <p>{{post.content}}</p>
+                    <router-link :to="`${post.link}`">詳しく知る</router-link>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/x-template" id="post">
+        <div class="post-content">
+            <h1>{{title}}</h1>
+            <div v-for="(paragraph, index) in paragraphList" :key="index">
+                <div v-if="paragraph.iframe != ''" v-html="paragraph.iframe" class="iframe"></div>
+                <h2 v-html="paragraph.title"></h2>
+                <p v-html="paragraph.content"></p>
+                <img v-if="paragraph.img != ''" :src="paragraph.img" alt="">
+            </div>
+        </div>
+    </script>
+
+    <!--IndexJS-->
+    <script src="./index.js"></script>
+
+    <div id="app">
+        <header>
+            <img src="./Image/logo.jpg" alt="">
+            <h1>の倒し方</h1>
+        </header>
+
+        <main>
+            <router-view></router-view>
+        </main>
+    
+        <footer>
+            <h4>©ドラえもんの倒し方研究委員会</h4>
+        </footer>
+    </div>
+
+</body>
+</html>

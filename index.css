@@ -1,0 +1,104 @@
+body{
+    background-color: rgba(0, 168, 244);
+    width: 100vw;
+    font-family: 'Kosugi', sans-serif;
+    overflow-x: hidden;
+    position: relative;
+}
+
+header{
+    margin: 2rem auto;
+    width: 75%;
+    height: 6rem;
+    border-radius: 9999px;
+    background-color: white;
+    font-family: 'Reggae One', cursive;
+    display: flex;
+}
+
+header img{
+    height: 65%;
+    margin: 1rem;
+}
+
+main{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.card-parent{
+    display: flex;
+    width: 100%;
+}
+
+.card{
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    border-radius: 100%;
+    cursor: pointer;
+    margin: 20px auto;
+}
+
+
+.card-body{
+    margin: 60px;
+    text-align: center;
+}
+
+.card-body p{
+    min-height: 175px;
+}
+
+.card-body a{
+    color: white;
+    font-size: 1.5em;
+    background-color: rgba(0, 168, 244);
+    border: none;
+    padding: 0.5rem 1rem;
+    
+    text-decoration: none;
+}
+
+.post-content{
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 0 50px;
+    border-radius: 20px;
+}
+
+.post-content .iframe{
+    margin: 0 auto;
+}
+
+.post-content h1{
+    text-align: center;
+}
+
+.post-content h2{
+    border-left: 8px solid rgb(0, 144, 244);
+    padding: 0 0.5rem;
+}
+
+.post-content p{
+    font-size: 1.5rem;
+}
+
+.post-content img{
+    margin: 2rem;
+    border-radius: 2px;
+}
+
+
+footer{
+    position: absolute;
+    bottom: ;
+    background-color: white;
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+    color: #808080;
+}
